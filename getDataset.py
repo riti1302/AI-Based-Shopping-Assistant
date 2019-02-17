@@ -20,12 +20,14 @@ def getRecency(Time, item):
 
 
 def getData():
+	history_size = 1000
 	item = []
-	search_history = ['shirt', 'watch', 'wallet', 'shoes', 'belt', 'rice', 'sugar', 'skirt', 'sandal', 'heals', 'handbag', 'bagpack', 'pillow', 'teddy', 'suitcase', 'mobiles', 'laptop', 'fridge', 'desk', 'soda', 'hat', 'bangles', 'earrings', 'necklace', 'ring', 'shampoo', 'dates', 'cashew', 'juice', 'lays', 'maggi', 'keyboard']
+	search_history = ['shirt', 'watch', 'wallet', 'shoes', 'belt', 'rice', 'sugar', 'skirt', 'sandal', 'heals', 'handbag', 'bagpack', 'pillow', 'teddy', 'suitcase', 'mobiles', 'laptop', 'fridge', 'desk', 'soda', 'hat', 'bangles', 'earrings', 'necklace', 'ring', 'shampoo', 'dates', 'cashew', 'juice', 'lays', 'maggi', 'keyboard', 'paper', 'pen', 'pencil', 'radio', 'rocket fuel', 'bulbs', 'ink', 'pajamas', 'shower', 'letters', 'books', 'bottles', 'juice', 'cars', 'bread', 'chain', 'bullets', 'mutton', 'shampoo', 'cakes', 'cards', 'pearls' , 'rope','bacon','tomatoes','sugar', 'eggs','onions','yeast','vegetables','baking powder','cheese', 'milk', 'handbags', 'boots', 'sweaters', 'dress', 'jacket'
+]
 	item_names = []
 	Time = []
-	for i in range(50):
-		number = randrange(1,32)
+	for i in range(history_size):
+		number = randrange(1,70)
 		item.append(number)
 		item_names.append(search_history[number])
 		time = randrange(1550350815, 1550370815, 100)
@@ -90,4 +92,3 @@ def calculate_recency(item_list,items):
 
 getData()
 calculate_frequency()
-
