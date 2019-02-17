@@ -1,5 +1,6 @@
 import csv
 from random import randrange
+import random
 import pandas as pd
 import numpy as np
 from collections import Counter
@@ -21,32 +22,3 @@ def getData():
 	df.to_csv('dataset.csv', mode ='w', index=False)
 
 	print(df.head) 
-
-def calculate_frequency():
-	df = pd.read_csv('dataset.csv')
-	new_frequency= []
-	new_names= []
-	new_items= []
-	#print(df)
-	items = df['Item'].tolist()
-	item_names = df['Item_names'].tolist()
-
-	item_list = dict(zip(items, item_names))
-	print(item_list)
-
-	frequency = Counter(items)
-	print(frequency)
-
-	for item in item_list:
-		new_items.append(item)
-		new_names.append(item_list[item])
-		new_frequency.append(frequency[item])
-
-	df = pd.DataFrame(columns=['Item', 'Item_names', 'Frequency'])
-	df['Item'] = new_items
-	df['Item_names'] = new_names
-	df['Frequency'] = new_frequency
-	df.to_csv('person.csv', mode ='w', index=False)
-
-getData()
-calculate_frequency()
