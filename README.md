@@ -1,7 +1,7 @@
 # AI-Based-Shopping-Assistant
 
 ## Colaborators :
->1.Ritika KUmari
+>1.Ritika Kumari
 
 >2.Ratna Priya
 
