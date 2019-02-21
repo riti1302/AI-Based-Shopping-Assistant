@@ -32,12 +32,5 @@ Run the main file
 To increse the database, add more files to [Database](data/)
 
 
-## Outputs
-
-
-
-
-
-
-
-
+## Output
+<p align="center"> <img src="output.gif"/> </p>
